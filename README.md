@@ -1,4 +1,4 @@
-# Node.js Express, Sequelize & PostgreSQL: CRUD  APIs
+# Node.js Express, PostgreSQL: CRUD  APIs
 
 ## Project setup
 ```
