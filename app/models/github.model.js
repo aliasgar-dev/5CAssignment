@@ -23,7 +23,12 @@ module.exports = (sequelize, Sequelize) => {
     {
       freezeTableName:true
     })
-
+  GithubUser.assocate = modals =>{
+    GithubUser.hasOne(modals.owner,{
+      onDelete:"Cascade"
+    })
+    
+  }
   return GithubUser;
 };
 

@@ -5,7 +5,7 @@ const fetch_API = require('node-fetch')
 const isAbsolute = require('is-absolute-url')
 const async = require('async')
 
-// Create and Save a new Tutorial
+
 exports.create = async(req, res) => {
  
   if (!req.body.url) {
@@ -69,13 +69,13 @@ exports.create = async(req, res) => {
       }
 };
 
-// Retrieve all Tutorials from the database.
+
 exports.findAll = (req, res) => {
   console.log('-----req-----',req.params)
   var id = req.params.id ? req.params.id :null 
-  // var condition = title ? { title: { [Op.iLike]: `%${title}%` } } : null;
+  
 
-  Github.findAll()
+  Github.findAll({inclued:"owner"})
     .then(data => {
       // console.log('---data---',data)
       res.send(data);
@@ -88,7 +88,7 @@ exports.findAll = (req, res) => {
     });
 };
 
-// Find a single Tutorial with an id
+
 exports.findOne = (req, res) => {
   const id = req.params.id;
 

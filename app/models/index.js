@@ -20,6 +20,6 @@ db.sequelize = sequelize;
 
 db.github = require("./github.model.js")(sequelize, Sequelize);
 db.owner = require("./owner.model.js")(sequelize, Sequelize);
-db.owner.belongsTo(db.github);
+// db.owner.belongsTo(db.github);
 
 module.exports = db;

@@ -16,8 +16,16 @@ module.exports = (sequelize,Sequelize)=>{
      site_admin:{
        type:Sequelize.BOOLEAN
      }
-    
    })
+
+
+  owner.associate= modals=>{
+  	owner.belongsTo(modals.GithubUser,{
+  		foreignKey:{
+  			
+  		}
+  	})
+  }
   return owner
 
 }
